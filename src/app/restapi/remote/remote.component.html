@@ -1,0 +1,47 @@
+<div>
+Remote Users:{{message}}
+</div>
+  <div>
+<table border="1">
+          <thead>
+              <tr>
+                  <th>
+                     Id
+                  </th>
+                  <th>
+                      Username
+                  </th>
+                  <th>
+                      Salary
+                   </th>
+                  <th>
+                     age
+                  </th>
+                                </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor= "let u of users">
+              <td>{{ u.id }}</td>
+              <td>{{ u.employee_name }}</td>
+              <td>{{ u.employee_salary }}</td>
+              <td>{{ u.employee_age }}</td>
+             <td>
+               <button (click)="getEmployeeDetails(u.id)">
+                 Details
+               </button>
+             </td>
+             <td>
+                <button (click)="deleteEmployee(u.id)">
+                 Delete
+                </button>
+              </td>
+              <td>
+                  <button (click)="addEmployee()">
+                   Add
+                  </button>
+                </td>
+          </tr>
+          </tbody>
+         
+      </table>
+</div>
